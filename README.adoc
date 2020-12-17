@@ -389,10 +389,11 @@ wf_resp标识表。 +
 === ··topics信道
 
 链接格式：http://{gateway_host}:{gateway_post}/{service_name1};{service_name2}
+
 	说明：
 	使用英文半角分号“;”拼接多个微服务名
 
-请求体中，`method`固定为`topics`
+请求体中，`method` 固定为 `topics`
 
 [source,json]
 ----
@@ -562,7 +563,7 @@ image::adoc/download.png[]
 1.客户端调用微服务的“get_picture”（名称由微服务自定义）方法； +
 2.微服务端收到调用； +
 3.微服务端找到图片资源，并返回资源标识`res_id`，资源过期时间`res_expire`（客户端需要在过期之前下载）； +
-4.客户端收到`res_url`； +
+4.客户端收到 `res_url`； +
 5.客户端使用GET方式，请求`res_url`； +
 6.网关对微服务发起http请求，链接如：http://service_host:service_port/service_name?id=res_id ； +
 7.微服务端根据`res_id`找到图片资源，按资源实际内容构建content-type，响应200状态，并输出资源内容； +
