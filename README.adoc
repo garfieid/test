@@ -383,9 +383,9 @@ wf_resp标识表。 +
 
 |===
 
+[[channel_topics]]
 === ··topics信道
 
-[[channel_topics]]
 链接格式：http://{gateway_host}:{gateway_post}/{service_name1};{service_name2}
 	说明：
 	使用英文半角分号“;”拼接多个微服务名
