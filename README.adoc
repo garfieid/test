@@ -415,7 +415,7 @@ wf_resp标识表。 +
 }
 ----
 
-响应体无`result`节点
+响应体无 `result` 节点
 
 [source,json]
 ----
@@ -550,11 +550,11 @@ image::adoc/upload.png[]
 
 1.客户端调用微服务的“open_picture”（名称由微服务自定义）方法； +
 2.微服务端收到调用； +
-3.微服务端开辟一个图片资源存储空间，并返回资源标识`res_id`，资源过期时间`res_expire`（客户端需要在过期之前上传）； +
-4.客户端收到`res_url`； +
-5.客户端构建表单（Content-Type:multipart/form-data），上传文件到`res_url`； +
+3.微服务端开辟一个图片资源存储空间，并返回资源标识 `res_id` ，资源过期时间 `res_expire` （客户端需要在过期之前上传）； +
+4.客户端收到 `res_url` ； +
+5.客户端构建表单（Content-Type:multipart/form-data），上传文件到 `res_url` ； +
 6.网关对微服务发起http请求，链接如：http://service_host:service_port/service_name?id=res_id ，请求头包含"WF-Channel":"stream"、"Content-Type":"multipart/form-data"； +
-7.微服务端根据`res_id`保存上传内容，并返回http状态码200； +
+7.微服务端根据 `res_id` 保存上传内容，并返回http状态码200； +
 8.网关返回http状态码200
 
 *下载过程：* +
@@ -562,10 +562,10 @@ image::adoc/download.png[]
 
 1.客户端调用微服务的“get_picture”（名称由微服务自定义）方法； +
 2.微服务端收到调用； +
-3.微服务端找到图片资源，并返回资源标识`res_id`，资源过期时间`res_expire`（客户端需要在过期之前下载）； +
-4.客户端收到 `res_url`； +
-5.客户端使用GET方式，请求`res_url`； +
+3.微服务端找到图片资源，并返回资源标识 `res_id` ，资源过期时间 `res_expire` （客户端需要在过期之前下载）； +
+4.客户端收到 `res_url` ； +
+5.客户端使用GET方式，请求 `res_url` ； +
 6.网关对微服务发起http请求，链接如：http://service_host:service_port/service_name?id=res_id ； +
-7.微服务端根据`res_id`找到图片资源，按资源实际内容构建content-type，响应200状态，并输出资源内容； +
+7.微服务端根据 `res_id` 找到图片资源，按资源实际内容构建content-type，响应200状态，并输出资源内容； +
 8.网关返回资源内容给客户端
 
