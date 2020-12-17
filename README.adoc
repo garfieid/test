@@ -73,6 +73,7 @@ Content-Type：内容格式与编码。取值：application/json;charset=utf-8
 WF-Noise：长度为16，包含小写字母与数字，且不重复的字串
 
 WF-Content-Sign：POST内容体的SHA256签名的base64字串
+
 	生成过程：
 	a)Charset(POST内容体)，使用协议头声明编码方式对POST内容体编码，得到编码后的字节数组post_data；
 	b)SHA256(post_data)，得到post_sign；
